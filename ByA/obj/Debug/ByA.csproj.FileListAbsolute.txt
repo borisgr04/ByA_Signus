@@ -1,0 +1,5 @@
+D:\Dev\newTFS\SignusLiq\SignusLiq\ByA\bin\Debug\ByA.dll
+D:\Dev\newTFS\SignusLiq\SignusLiq\ByA\bin\Debug\ByA.pdb
+D:\Dev\newTFS\SignusLiq\SignusLiq\ByA\obj\Debug\ByA.csprojResolveAssemblyReference.cache
+D:\Dev\newTFS\SignusLiq\SignusLiq\ByA\obj\Debug\ByA.dll
+D:\Dev\newTFS\SignusLiq\SignusLiq\ByA\obj\Debug\ByA.pdb

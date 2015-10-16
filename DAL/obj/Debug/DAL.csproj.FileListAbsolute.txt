@@ -1,0 +1,7 @@
+D:\Dev\newTFS\SignusLiq\SignusLiq\DAL\bin\Debug\DAL.dll.config
+D:\Dev\newTFS\SignusLiq\SignusLiq\DAL\bin\Debug\DAL.dll
+D:\Dev\newTFS\SignusLiq\SignusLiq\DAL\bin\Debug\DAL.pdb
+D:\Dev\newTFS\SignusLiq\SignusLiq\DAL\bin\Debug\EntityFramework.dll
+D:\Dev\newTFS\SignusLiq\SignusLiq\DAL\bin\Debug\EntityFramework.xml
+D:\Dev\newTFS\SignusLiq\SignusLiq\DAL\obj\Debug\DAL.dll
+D:\Dev\newTFS\SignusLiq\SignusLiq\DAL\obj\Debug\DAL.pdb

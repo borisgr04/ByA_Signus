@@ -1,0 +1,17 @@
+D:\Dev\newTFS\SignusLiq\SignusLiq\BLL\bin\Release\AutoMapper.Net4.dll
+D:\Dev\newTFS\SignusLiq\SignusLiq\BLL\bin\Release\BLL.dll.config
+D:\Dev\newTFS\SignusLiq\SignusLiq\BLL\bin\Release\BLL.dll
+D:\Dev\newTFS\SignusLiq\SignusLiq\BLL\bin\Release\BLL.pdb
+D:\Dev\newTFS\SignusLiq\SignusLiq\BLL\bin\Release\AutoMapper.dll
+D:\Dev\newTFS\SignusLiq\SignusLiq\BLL\bin\Release\ByA.dll
+D:\Dev\newTFS\SignusLiq\SignusLiq\BLL\bin\Release\DAL.dll
+D:\Dev\newTFS\SignusLiq\SignusLiq\BLL\bin\Release\Entidades.dll
+D:\Dev\newTFS\SignusLiq\SignusLiq\BLL\bin\Release\EntityFramework.dll
+D:\Dev\newTFS\SignusLiq\SignusLiq\BLL\bin\Release\ByA.pdb
+D:\Dev\newTFS\SignusLiq\SignusLiq\BLL\bin\Release\DAL.pdb
+D:\Dev\newTFS\SignusLiq\SignusLiq\BLL\bin\Release\Entidades.pdb
+D:\Dev\newTFS\SignusLiq\SignusLiq\BLL\bin\Release\AutoMapper.xml
+D:\Dev\newTFS\SignusLiq\SignusLiq\BLL\bin\Release\EntityFramework.xml
+D:\Dev\newTFS\SignusLiq\SignusLiq\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+D:\Dev\newTFS\SignusLiq\SignusLiq\BLL\obj\Release\BLL.dll
+D:\Dev\newTFS\SignusLiq\SignusLiq\BLL\obj\Release\BLL.pdb

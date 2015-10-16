@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dfbce4aebb164669b33ef5ce7f3305a4" Name="Diagram1" ZoomLevel="44">
+        <EntityTypeShape EntityType="Model.BASES_LIQ" Width="1.5" PointX="5.4544707133688357" PointY="22.198935012425732" />
+        <EntityTypeShape EntityType="Model.CALENDARIO" Width="1.5" PointX="6.9206639616380734" PointY="11.664511030383647" />
+        <EntityTypeShape EntityType="Model.DEPARTAMENTOS" Width="1.5" PointX="4.865326380760095" PointY="10.298711736825625" />
+        <EntityTypeShape EntityType="Model.DIRECCIONES_EXTERNAS" Width="1.5" PointX="11.928887195852067" PointY="13.669537848639086" />
+        <EntityTypeShape EntityType="Model.FM_BASESLIQ01" Width="1.5" PointX="8.5429586956943186" PointY="17.712944158219241" />
+        <EntityTypeShape EntityType="Model.MENU" Width="1.5" PointX="6.598827786091169" PointY="2.1774858395464185" />
+        <EntityTypeShape EntityType="Model.MUNICIPIOS" Width="1.5" PointX="9.107201768600941" PointY="22.597483138832022" />
+        <EntityTypeShape EntityType="Model.ORA_ASPNET_MEMBERSHIP" Width="1.5" PointX="10.018122049988303" PointY="13.523845246771279" />
+        <EntityTypeShape EntityType="Model.ORA_ASPNET_USERS" Width="1.5" PointX="4.1385222580928929" PointY="31.650932639674718" />
+        <EntityTypeShape EntityType="Model.SL_AGETDPTA" Width="1.5" PointX="10.599348211008753" PointY="23.007544558033135" />
+        <EntityTypeShape EntityType="Model.SL_DETLIQ" Width="1.5" PointX="1.332737558210612" PointY="20.803017268331264" />
+        <EntityTypeShape EntityType="Model.SL_LIQESTAMPILLAS" Width="1.5" PointX="5.91162260710803" PointY="4.8370140366428593" />
+        <EntityTypeShape EntityType="Model.SL_PAGOS" Width="1.5" PointX="2.1994144889523342" PointY="13.286721265542656" />
+        <EntityTypeShape EntityType="Model.SL_TERCEROS" Width="1.5" PointX="1.6469649046878168" PointY="7.6769296413645751" />
+        <EntityTypeShape EntityType="Model.SL_TIPOPER" Width="1.5" PointX="10.372204831974676" PointY="5.0954332524423647" />
+        <EntityTypeShape EntityType="Model.SL_TIPORGM" Width="1.5" PointX="7.3214253780066159" PointY="8.5420776943406445" />
+        <EntityTypeShape EntityType="Model.TDOC_IDE" Width="1.5" PointX="5.9272228767756481" PointY="4.338210256927745" />
+        <EntityTypeShape EntityType="Model.TERCEROS" Width="1.5" PointX="10.856922614787203" PointY="31.699265554407269" />
+        <EntityTypeShape EntityType="Model.VIGENCIA" Width="1.5" PointX="4.297708781574717" PointY="15.892082162151151" />
+        <AssociationConnector Association="Model.BASES_LIQ_CALENDARIO_FK1" />
+        <AssociationConnector Association="Model.FM_BASESLIQ01_BASES_LIQ_FK1" />
+        <AssociationConnector Association="Model.MENU_MENU_FK1" />
+        <AssociationConnector Association="Model.TERCEROS_MUNICIPIOS_FK1" />
+        <AssociationConnector Association="Model.FK_MEMBERSHIP_USERID" />
+        <AssociationConnector Association="Model.SL_DETLIQ_LIQESTAMPILLAS_FK" />
+        <AssociationConnector Association="Model.SL_PAGOS_LIQ_FK" />
+        <AssociationConnector Association="Model.SL_TERCEROS_FK" />
+        <AssociationConnector Association="Model.SL_TERCEROS_FK_PER" />
+        <AssociationConnector Association="Model.SL_TERCEROS_FK_RGM" />
+        <AssociationConnector Association="Model.SL_TERCEROS_FK_TDOC" />
+        <AssociationConnector Association="Model.TERCEROS_TDOC_IDE_FK1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

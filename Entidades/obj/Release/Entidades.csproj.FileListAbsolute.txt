@@ -1,0 +1,5 @@
+D:\Dev\newTFS\SignusLiq\SignusLiq\Entidades\bin\Release\Entidades.dll
+D:\Dev\newTFS\SignusLiq\SignusLiq\Entidades\bin\Release\Entidades.pdb
+D:\Dev\newTFS\SignusLiq\SignusLiq\Entidades\obj\Release\Entidades.csprojResolveAssemblyReference.cache
+D:\Dev\newTFS\SignusLiq\SignusLiq\Entidades\obj\Release\Entidades.dll
+D:\Dev\newTFS\SignusLiq\SignusLiq\Entidades\obj\Release\Entidades.pdb

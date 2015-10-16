@@ -1,0 +1,26 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.phonegap.plugins.barcodescanner": {
+        "source": {
+            "type": "local",
+            "path": "\\users\\orley\\desktop\\BarcodeScanner-master"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-splashscreen": {
+        "source": {
+            "type": "local",
+            "path": "\\users\\orley\\desktop\\cordova-plugin-splashscreen-master"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

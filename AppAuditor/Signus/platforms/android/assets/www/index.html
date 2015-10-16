@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+        <title>Signus</title>
+        <script type="text/javascript" src="cordova.js"></script>
+        <link rel="stylesheet" href="css/byaElecciones.min.css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.3.min.css" />        
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="css/jquery.mobile-1.4.3.min.js"></script>          
+        <script type="text/javascript" src="js/jquery_ext.js"></script>  
+        <script type="text/javascript" src="js/CallApis/Apps.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>      
+        <script type="text/javascript" src="js/bya_Page.js"></script>       
+        <script type="application/javascript" src="js/fastclick.js"></script> 
+        
+    </head>
+    <body>
+        <div data-role="page" data-theme="d" class="body">
+            <div data-role="header" data-position="fixed" data-theme="a">  
+                <a id="btnAtras" class="ui-btn ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left ui-btn-left" style="font-size:70%">Atrás</a>
+                <h1 style="color: white">Signus</h1>  
+                <a id="btnCerrarSesion" class="ui-btn ui-btn-inline ui-mini ui-icon-action ui-btn-icon-right ui-btn-right" style="font-size:70%">Salir</a>
+                <!--<a id="btnCerrarSesion" class="ui-btn-right ui-btn-corner-all ui-btn ui-btn-a ui-icon-action ui-btn-icon-notext ui-shadow" title="" data-form="ui-icon" data-role="button" role="button"></a>-->              
+            </div>
+            <div data-role="content">
+                <div id="pageHome" style="display:none">
+                    <div>
+                        <div style="text-align:center"><h3 style="-webkit-box-shadow: 0 10px 6px -6px #337ab7;-moz-box-shadow: 0 10px 6px -6px #337ab7;box-shadow: 0 10px 6px -6px #337ab7;">Auditar liquidación</h3></div>                              
+                    </div>   
+                    <div>             
+                        <button id="btnNuevoEvento" class="ui-btn ui-btn-d"><i class="fa fa-qrcode fa-5x" style="vertical-align:middle;margin-right:5px"></i></button>
+                    </div> 
+                    <div>
+                        <div style="text-align:center"><h3 style="-webkit-box-shadow: 0 10px 6px -6px #337ab7;-moz-box-shadow: 0 10px 6px -6px #337ab7;box-shadow: 0 10px 6px -6px #337ab7;">Consulta por agente</h3></div>                              
+                    </div>   
+                    <div>       
+                        <label>Agente recaudador</label>      
+                        <input type="text" name="txtAgente" id="txtAgente" value="">
+                        <div style="text-align:right">
+                            <a id="btnBuscarAgente" class="ui-shadow ui-btn ui-btn-a ui-corner-all ui-btn-inline ui-btn-icon-right ui-icon-search ui-mini">Buscar</a>
+                        </div>                        
+                    </div> 
+                </div> 
+                <div id="pageDetallesLiquidacion" style="display:none">
+                    <div>
+                        <div style="text-align:center"><h3 style="-webkit-box-shadow: 0 10px 6px -6px #337ab7;-moz-box-shadow: 0 10px 6px -6px #337ab7;box-shadow: 0 10px 6px -6px #337ab7;">Detalle Liquidación</h3></div>                              
+                    </div>
+                    <div style='background-color:#f3f3f3; font-size: 0.7rem;'>
+                        <div style='padding:8px 8px 8px 8px' id="dvdDetLiqInfo">     
+                        </div>
+                    </div> 
+                </div>   
+                <div id="pageAgentesRecaudadores" style="display:none">
+                    <div>
+                        <div style="text-align:center"><h3 style="-webkit-box-shadow: 0 10px 6px -6px #337ab7;-moz-box-shadow: 0 10px 6px -6px #337ab7;box-shadow: 0 10px 6px -6px #337ab7;">Agentes Recaudadores</h3></div>                              
+                    </div>
+                    <label>Vigencia</label>
+                    <select id="cboVigencias">
+                    </select>
+                    <ul id="lstAgentes" data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-filter="true">
+	                </ul>
+                </div>   
+                <div id="pageConsultaPorAgentes" style="display:none">
+                    <div>
+                        <div style="text-align:center"><h3 style="-webkit-box-shadow: 0 10px 6px -6px #337ab7;-moz-box-shadow: 0 10px 6px -6px #337ab7;box-shadow: 0 10px 6px -6px #337ab7;">Consulta por agente</h3></div>                              
+                    </div>
+                    <div style='background-color:#f3f3f3; font-size: 0.7rem;'>
+                        <div style='padding:8px 8px 8px 8px' id="dvdConsultaPorAgente"> 
+                            <label id="dvdVigencia"><strong>Vigencia: </strong>2015</label>
+                            <table style="font-size:95%; width:100%" id="tblRConsultaPorAgente">                    
+                            </table>    
+                        </div>                       
+                    </div>                    
+                </div>                         
+            </div>   
+        </div>
+    </body>  
+    </html> 

@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BASES_LIQ" EntityType="Model.BASES_LIQ" />
+    <EntitySet Name="CALENDARIO" EntityType="Model.CALENDARIO" />
+    <EntitySet Name="DEPARTAMENTOS" EntityType="Model.DEPARTAMENTOS" />
+    <EntitySet Name="DIRECCIONES_EXTERNAS" EntityType="Model.DIRECCIONES_EXTERNAS" />
+    <EntitySet Name="FM_BASESLIQ01" EntityType="Model.FM_BASESLIQ01" />
+    <EntitySet Name="MENU" EntityType="Model.MENU" />
+    <EntitySet Name="MUNICIPIOS" EntityType="Model.MUNICIPIOS" />
+    <EntitySet Name="ORA_ASPNET_MEMBERSHIP" EntityType="Model.ORA_ASPNET_MEMBERSHIP" />
+    <EntitySet Name="ORA_ASPNET_USERS" EntityType="Model.ORA_ASPNET_USERS" />
+    <EntitySet Name="SL_AGETDPTA" EntityType="Model.SL_AGETDPTA" />
+    <EntitySet Name="SL_DETLIQ" EntityType="Model.SL_DETLIQ" />
+    <EntitySet Name="SL_LIQESTAMPILLAS" EntityType="Model.SL_LIQESTAMPILLAS" />
+    <EntitySet Name="SL_PAGOS" EntityType="Model.SL_PAGOS" />
+    <EntitySet Name="SL_TERCEROS" EntityType="Model.SL_TERCEROS" />
+    <EntitySet Name="SL_TIPOPER" EntityType="Model.SL_TIPOPER" />
+    <EntitySet Name="SL_TIPORGM" EntityType="Model.SL_TIPORGM" />
+    <EntitySet Name="TDOC_IDE" EntityType="Model.TDOC_IDE" />
+    <EntitySet Name="TERCEROS" EntityType="Model.TERCEROS" />
+    <EntitySet Name="VIGENCIA" EntityType="Model.VIGENCIA" />
+    <AssociationSet Name="BASES_LIQ_CALENDARIO_FK1" Association="Model.BASES_LIQ_CALENDARIO_FK1">
+      <End Role="CALENDARIO" EntitySet="CALENDARIO" />
+      <End Role="BASES_LIQ" EntitySet="BASES_LIQ" />
+    </AssociationSet>
+    <AssociationSet Name="FM_BASESLIQ01_BASES_LIQ_FK1" Association="Model.FM_BASESLIQ01_BASES_LIQ_FK1">
+      <End Role="BASES_LIQ" EntitySet="BASES_LIQ" />
+      <End Role="FM_BASESLIQ01" EntitySet="FM_BASESLIQ01" />
+    </AssociationSet>
+    <AssociationSet Name="MENU_MENU_FK1" Association="Model.MENU_MENU_FK1">
+      <End Role="MENU" EntitySet="MENU" />
+      <End Role="MENU1" EntitySet="MENU" />
+    </AssociationSet>
+    <AssociationSet Name="TERCEROS_MUNICIPIOS_FK1" Association="Model.TERCEROS_MUNICIPIOS_FK1">
+      <End Role="MUNICIPIOS" EntitySet="MUNICIPIOS" />
+      <End Role="TERCEROS" EntitySet="TERCEROS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MEMBERSHIP_USERID" Association="Model.FK_MEMBERSHIP_USERID">
+      <End Role="ORA_ASPNET_USERS" EntitySet="ORA_ASPNET_USERS" />
+      <End Role="ORA_ASPNET_MEMBERSHIP" EntitySet="ORA_ASPNET_MEMBERSHIP" />
+    </AssociationSet>
+    <AssociationSet Name="SL_DETLIQ_LIQESTAMPILLAS_FK" Association="Model.SL_DETLIQ_LIQESTAMPILLAS_FK">
+      <End Role="SL_LIQESTAMPILLAS" EntitySet="SL_LIQESTAMPILLAS" />
+      <End Role="SL_DETLIQ" EntitySet="SL_DETLIQ" />
+    </AssociationSet>
+    <AssociationSet Name="SL_PAGOS_LIQ_FK" Association="Model.SL_PAGOS_LIQ_FK">
+      <End Role="SL_LIQESTAMPILLAS" EntitySet="SL_LIQESTAMPILLAS" />
+      <End Role="SL_PAGOS" EntitySet="SL_PAGOS" />
+    </AssociationSet>
+    <AssociationSet Name="SL_TERCEROS_FK" Association="Model.SL_TERCEROS_FK">
+      <End Role="SL_TERCEROS" EntitySet="SL_TERCEROS" />
+      <End Role="SL_LIQESTAMPILLAS" EntitySet="SL_LIQESTAMPILLAS" />
+    </AssociationSet>
+    <AssociationSet Name="SL_TERCEROS_FK_PER" Association="Model.SL_TERCEROS_FK_PER">
+      <End Role="SL_TIPOPER" EntitySet="SL_TIPOPER" />
+      <End Role="SL_TERCEROS" EntitySet="SL_TERCEROS" />
+    </AssociationSet>
+    <AssociationSet Name="SL_TERCEROS_FK_RGM" Association="Model.SL_TERCEROS_FK_RGM">
+      <End Role="SL_TIPORGM" EntitySet="SL_TIPORGM" />
+      <End Role="SL_TERCEROS" EntitySet="SL_TERCEROS" />
+    </AssociationSet>
+    <AssociationSet Name="SL_TERCEROS_FK_TDOC" Association="Model.SL_TERCEROS_FK_TDOC">
+      <End Role="TDOC_IDE" EntitySet="TDOC_IDE" />
+      <End Role="SL_TERCEROS" EntitySet="SL_TERCEROS" />
+    </AssociationSet>
+    <AssociationSet Name="TERCEROS_TDOC_IDE_FK1" Association="Model.TERCEROS_TDOC_IDE_FK1">
+      <End Role="TDOC_IDE" EntitySet="TDOC_IDE" />
+      <End Role="TERCEROS" EntitySet="TERCEROS" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BASES_LIQ">
+    <Key>
+      <PropertyRef Name="BALI_NRAD" />
+    </Key>
+    <Property Type="Int32" Name="BALI_NRAD" Nullable="false" />
+    <Property Type="String" Name="BALI_NIT" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BALI_CDEC" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BALI_AÑO" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BALI_PERI" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BALI_ARCH" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BALI_EST" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BALI_USAP" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BALI_USBD" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="BALI_FESI" />
+    <Property Type="DateTime" Name="BALI_FECH" />
+    <Property Type="String" Name="BALI_FDCO" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="BALI_FREG" />
+    <Property Type="DateTime" Name="BALI_FNOV" />
+    <NavigationProperty Name="CALENDARIO" Relationship="Model.BASES_LIQ_CALENDARIO_FK1" FromRole="BASES_LIQ" ToRole="CALENDARIO" />
+    <NavigationProperty Name="FM_BASESLIQ01" Relationship="Model.FM_BASESLIQ01_BASES_LIQ_FK1" FromRole="BASES_LIQ" ToRole="FM_BASESLIQ01" />
+  </EntityType>
+  <EntityType Name="CALENDARIO">
+    <Key>
+      <PropertyRef Name="CAL_PER" />
+      <PropertyRef Name="CAL_VIG" />
+      <PropertyRef Name="CAL_CLA" />
+    </Key>
+    <Property Type="String" Name="CAL_PER" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAL_VIG" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CAL_FINI" Nullable="false" />
+    <Property Type="DateTime" Name="CAL_FFIN" Nullable="false" />
+    <Property Type="String" Name="CAL_CLA" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAL_DES" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAL_USBD" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAL_USAP" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CAL_FREG" />
+    <Property Type="DateTime" Name="CAL_FNOV" />
+    <Property Type="DateTime" Name="CAL_FVEN" />
+    <NavigationProperty Name="BASES_LIQ" Relationship="Model.BASES_LIQ_CALENDARIO_FK1" FromRole="CALENDARIO" ToRole="BASES_LIQ" />
+  </EntityType>
+  <EntityType Name="DEPARTAMENTOS">
+    <Key>
+      <PropertyRef Name="COD_DEPTO" />
+    </Key>
+    <Property Type="String" Name="COD_DEPTO" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_DEPTO" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ABREV_DISFON" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USAP" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USBD" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FREG" />
+    <Property Type="DateTime" Name="FNOV" />
+  </EntityType>
+  <EntityType Name="DIRECCIONES_EXTERNAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Decimal" Name="ID" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="NOMBRE" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="URL" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ACTUALIZACION" />
+  </EntityType>
+  <EntityType Name="FM_BASESLIQ01">
+    <Key>
+      <PropertyRef Name="NIT_AR" />
+      <PropertyRef Name="DV_AR" />
+      <PropertyRef Name="CDEC" />
+      <PropertyRef Name="IMPTO" />
+      <PropertyRef Name="AGRAVABLE" />
+      <PropertyRef Name="PGRAVABLE" />
+      <PropertyRef Name="NDOC" />
+      <PropertyRef Name="FOPER" />
+      <PropertyRef Name="TIDE" />
+      <PropertyRef Name="NIDE" />
+      <PropertyRef Name="RAZSOC" />
+      <PropertyRef Name="CONCEPTO" />
+      <PropertyRef Name="VALORBASE" />
+      <PropertyRef Name="TARIFA" />
+      <PropertyRef Name="VALORIMPTO" />
+      <PropertyRef Name="NRO_RAD" />
+      <PropertyRef Name="USAP" />
+      <PropertyRef Name="USBD" />
+      <PropertyRef Name="FESI" />
+    </Key>
+    <Property Type="Int64" Name="NIT_AR" Nullable="false" />
+    <Property Type="Int16" Name="DV_AR" Nullable="false" />
+    <Property Type="String" Name="CDEC" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IMPTO" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AGRAVABLE" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PGRAVABLE" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="NDOC" Nullable="false" />
+    <Property Type="DateTime" Name="FOPER" Nullable="false" />
+    <Property Type="String" Name="TIDE" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="NIDE" Nullable="false" />
+    <Property Type="Int16" Name="DV" />
+    <Property Type="String" Name="RAZSOC" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CONCEPTO" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="VALORBASE" Nullable="false" Precision="20" Scale="0" />
+    <Property Type="Decimal" Name="TARIFA" Nullable="false" Precision="20" Scale="4" />
+    <Property Type="Decimal" Name="VALORIMPTO" Nullable="false" Precision="20" Scale="4" />
+    <Property Type="Int32" Name="NRO_RAD" Nullable="false" />
+    <Property Type="String" Name="USAP" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USBD" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FESI" Nullable="false" />
+    <Property Type="DateTime" Name="FREG" />
+    <Property Type="DateTime" Name="FNOV" />
+    <Property Type="String" Name="COD_MPIO" MaxLength="6" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BASES_LIQ" Relationship="Model.FM_BASESLIQ01_BASES_LIQ_FK1" FromRole="FM_BASESLIQ01" ToRole="BASES_LIQ" />
+  </EntityType>
+  <EntityType Name="MENU">
+    <Key>
+      <PropertyRef Name="MENUID" />
+    </Key>
+    <Property Type="String" Name="MENUID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TITULO" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DESCRIPCION" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PADREID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="POSICION" Nullable="false" />
+    <Property Type="String" Name="ICONO" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="HABILITADO" Nullable="false" />
+    <Property Type="String" Name="URL" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MODULO" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ROLES" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TARGET" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PPAL" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USAP" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USBD" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FREG" />
+    <Property Type="DateTime" Name="FNOV" />
+    <NavigationProperty Name="MENU1" Relationship="Model.MENU_MENU_FK1" FromRole="MENU" ToRole="MENU1" />
+    <NavigationProperty Name="MENU2" Relationship="Model.MENU_MENU_FK1" FromRole="MENU1" ToRole="MENU" />
+  </EntityType>
+  <EntityType Name="MUNICIPIOS">
+    <Key>
+      <PropertyRef Name="MUN_COD" />
+    </Key>
+    <Property Type="String" Name="MUN_COD" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MUN_NOM" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MUN_USAP" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MUN_USBD" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="MUN_FREG" />
+    <Property Type="DateTime" Name="MUN_FNOV" />
+    <Property Type="String" Name="MUN_DPCO" MaxLength="2" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TERCEROS" Relationship="Model.TERCEROS_MUNICIPIOS_FK1" FromRole="MUNICIPIOS" ToRole="TERCEROS" />
+  </EntityType>
+  <EntityType Name="ORA_ASPNET_MEMBERSHIP">
+    <Key>
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Type="Guid" Name="APPLICATIONID" Nullable="false" />
+    <Property Type="Guid" Name="USERID" Nullable="false" />
+    <Property Type="String" Name="PASSWORD" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="PASSWORDFORMAT" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="PASSWORDSALT" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MOBILEPIN" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMAIL" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LOWEREDEMAIL" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PASSWORDQUESTION" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PASSWORDANSWER" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="ISAPPROVED" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="ISLOCKEDOUT" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="CREATEDATE" Nullable="false" />
+    <Property Type="DateTime" Name="LASTLOGINDATE" Nullable="false" />
+    <Property Type="DateTime" Name="LASTPASSWORDCHANGEDDATE" Nullable="false" />
+    <Property Type="DateTime" Name="LASTLOCKOUTDATE" Nullable="false" />
+    <Property Type="Decimal" Name="FAILEDPWDATTEMPTCOUNT" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="FAILEDPWDATTEMPTWINSTART" Nullable="false" />
+    <Property Type="Decimal" Name="FAILEDPWDANSWERATTEMPTCOUNT" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="FAILEDPWDANSWERATTEMPTWINSTART" Nullable="false" />
+    <Property Type="String" Name="COMMENTS" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ORA_ASPNET_USERS" Relationship="Model.FK_MEMBERSHIP_USERID" FromRole="ORA_ASPNET_MEMBERSHIP" ToRole="ORA_ASPNET_USERS" />
+  </EntityType>
+  <EntityType Name="ORA_ASPNET_USERS">
+    <Key>
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Type="Guid" Name="APPLICATIONID" Nullable="false" />
+    <Property Type="Guid" Name="USERID" Nullable="false" />
+    <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LOWEREDUSERNAME" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MOBILEALIAS" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="ISANONYMOUS" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="LASTACTIVITYDATE" Nullable="false" />
+    <NavigationProperty Name="ORA_ASPNET_MEMBERSHIP" Relationship="Model.FK_MEMBERSHIP_USERID" FromRole="ORA_ASPNET_USERS" ToRole="ORA_ASPNET_MEMBERSHIP" />
+  </EntityType>
+  <EntityType Name="SL_AGETDPTA">
+    <Key>
+      <PropertyRef Name="TER_NIT" />
+    </Key>
+    <Property Type="String" Name="TER_NIT" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SL_DETLIQ">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Decimal" Name="ID" Nullable="false" Precision="20" Scale="0" />
+    <Property Type="Decimal" Name="ID_LIQ" Precision="20" Scale="0" />
+    <Property Type="String" Name="COD_IMP" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="TAR_IMP" Precision="20" Scale="5" />
+    <Property Type="Decimal" Name="VAL_BAS" Precision="20" Scale="5" />
+    <Property Type="DateTime" Name="FEC_REG" />
+    <Property Type="String" Name="USUARIO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SL_LIQESTAMPILLAS" Relationship="Model.SL_DETLIQ_LIQESTAMPILLAS_FK" FromRole="SL_DETLIQ" ToRole="SL_LIQESTAMPILLAS" />
+  </EntityType>
+  <EntityType Name="SL_LIQESTAMPILLAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Decimal" Name="ID" Nullable="false" Precision="20" Scale="0" />
+    <Property Type="String" Name="AGE_REC" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="VIG_LIQ" />
+    <Property Type="Int32" Name="NRO_LIQ" />
+    <Property Type="String" Name="PER_LIQ" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FEC_LIQ" />
+    <Property Type="String" Name="TER_NIT" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NUM_CTO" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FEC_SUS" />
+    <Property Type="DateTime" Name="FEC_VEN" />
+    <Property Type="String" Name="ADI_CTO" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OBJ_CTO" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="VAL_CTO" Precision="20" Scale="5" />
+    <Property Type="Decimal" Name="VAL_BAS" Precision="20" Scale="5" />
+    <Property Type="String" Name="OBS_LIQ" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FEC_REG" />
+    <Property Type="String" Name="USUARIO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="SUB_TOT" Precision="20" Scale="5" />
+    <Property Type="Decimal" Name="INTERES" Precision="20" Scale="5" />
+    <Property Type="Decimal" Name="SANCION" Precision="20" Scale="5" />
+    <Property Type="Decimal" Name="DECUENT" Precision="20" Scale="5" />
+    <Property Type="Decimal" Name="TOTAL" Precision="20" Scale="5" />
+    <Property Type="String" Name="ESTADO" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REPLICADO" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="VIG_PAG" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PER_PAG" MaxLength="2" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SL_DETLIQ" Relationship="Model.SL_DETLIQ_LIQESTAMPILLAS_FK" FromRole="SL_LIQESTAMPILLAS" ToRole="SL_DETLIQ" />
+    <NavigationProperty Name="SL_PAGOS" Relationship="Model.SL_PAGOS_LIQ_FK" FromRole="SL_LIQESTAMPILLAS" ToRole="SL_PAGOS" />
+    <NavigationProperty Name="SL_TERCEROS" Relationship="Model.SL_TERCEROS_FK" FromRole="SL_LIQESTAMPILLAS" ToRole="SL_TERCEROS" />
+  </EntityType>
+  <EntityType Name="SL_PAGOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Decimal" Name="ID" Nullable="false" Precision="20" Scale="0" />
+    <Property Type="Decimal" Name="ID_LIQ" Precision="20" Scale="0" />
+    <Property Type="DateTime" Name="FEC_PAGO" />
+    <Property Type="Decimal" Name="VAL_PAGO" Precision="17" Scale="2" />
+    <Property Type="DateTime" Name="FEC_REG" />
+    <Property Type="String" Name="USUARIO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ESTADO" MaxLength="2" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SL_LIQESTAMPILLAS" Relationship="Model.SL_PAGOS_LIQ_FK" FromRole="SL_PAGOS" ToRole="SL_LIQESTAMPILLAS" />
+  </EntityType>
+  <EntityType Name="SL_TERCEROS">
+    <Key>
+      <PropertyRef Name="TER_NIT" />
+    </Key>
+    <Property Type="Int32" Name="TER_CONS" Nullable="false" />
+    <Property Type="String" Name="TER_TDOC" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_NIT" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_DVER" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_PER" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_RGM" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_NOM" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_TEL" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_EMAI" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_DIR" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_MPIO" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FEC_REG" />
+    <Property Type="String" Name="USUARIO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SL_LIQESTAMPILLAS" Relationship="Model.SL_TERCEROS_FK" FromRole="SL_TERCEROS" ToRole="SL_LIQESTAMPILLAS" />
+    <NavigationProperty Name="SL_TIPOPER" Relationship="Model.SL_TERCEROS_FK_PER" FromRole="SL_TERCEROS" ToRole="SL_TIPOPER" />
+    <NavigationProperty Name="SL_TIPORGM" Relationship="Model.SL_TERCEROS_FK_RGM" FromRole="SL_TERCEROS" ToRole="SL_TIPORGM" />
+    <NavigationProperty Name="TDOC_IDE" Relationship="Model.SL_TERCEROS_FK_TDOC" FromRole="SL_TERCEROS" ToRole="TDOC_IDE" />
+  </EntityType>
+  <EntityType Name="SL_TIPOPER">
+    <Key>
+      <PropertyRef Name="COD_TIP" />
+    </Key>
+    <Property Type="String" Name="COD_TIP" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_TIP" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SL_TERCEROS" Relationship="Model.SL_TERCEROS_FK_PER" FromRole="SL_TIPOPER" ToRole="SL_TERCEROS" />
+  </EntityType>
+  <EntityType Name="SL_TIPORGM">
+    <Key>
+      <PropertyRef Name="COD_TIP" />
+    </Key>
+    <Property Type="String" Name="COD_TIP" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_TIP" MaxLength="22" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SL_TERCEROS" Relationship="Model.SL_TERCEROS_FK_RGM" FromRole="SL_TIPORGM" ToRole="SL_TERCEROS" />
+  </EntityType>
+  <EntityType Name="TDOC_IDE">
+    <Key>
+      <PropertyRef Name="TDOC_COD" />
+    </Key>
+    <Property Type="String" Name="TDOC_COD" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TDOC_NOM" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TDOC_USAP" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TDOC_USBD" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="TDOC_FREG" />
+    <Property Type="DateTime" Name="TDOC_FNOV" />
+    <NavigationProperty Name="SL_TERCEROS" Relationship="Model.SL_TERCEROS_FK_TDOC" FromRole="TDOC_IDE" ToRole="SL_TERCEROS" />
+    <NavigationProperty Name="TERCEROS" Relationship="Model.TERCEROS_TDOC_IDE_FK1" FromRole="TDOC_IDE" ToRole="TERCEROS" />
+  </EntityType>
+  <EntityType Name="TERCEROS">
+    <Key>
+      <PropertyRef Name="TER_TDOC" />
+      <PropertyRef Name="TER_NIT" />
+    </Key>
+    <Property Type="Int32" Name="TER_CONS" Nullable="false" />
+    <Property Type="String" Name="TER_TDOC" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_NIT" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_DVER" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_NOM" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_TIP" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_MPIO" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_EMAI" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_TEL" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_DIR" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_CED" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_REP" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_USU" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_TUS" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="TER_FREG" Nullable="false" />
+    <Property Type="DateTime" Name="TER_FNOV" Nullable="false" />
+    <Property Type="DateTime" Name="TER_FFIN" />
+    <Property Type="String" Name="TER_EST" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_OBS" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_USAP" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_USBD" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_REP_TD" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TER_REP_EXP" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="MUNICIPIOS" Relationship="Model.TERCEROS_MUNICIPIOS_FK1" FromRole="TERCEROS" ToRole="MUNICIPIOS" />
+    <NavigationProperty Name="TDOC_IDE" Relationship="Model.TERCEROS_TDOC_IDE_FK1" FromRole="TERCEROS" ToRole="TDOC_IDE" />
+  </EntityType>
+  <EntityType Name="VIGENCIA">
+    <Key>
+      <PropertyRef Name="VIG_COD" />
+    </Key>
+    <Property Type="String" Name="VIG_COD" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="VIG_FINI" Nullable="false" />
+    <Property Type="DateTime" Name="VIG_FFIN" />
+    <Property Type="String" Name="VIG_EST" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="VIG_USAP" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="VIG_USBD" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="VIG_FREG" />
+    <Property Type="DateTime" Name="VIG_FNOV" />
+  </EntityType>
+  <Association Name="BASES_LIQ_CALENDARIO_FK1">
+    <End Type="Model.CALENDARIO" Role="CALENDARIO" Multiplicity="0..1" />
+    <End Type="Model.BASES_LIQ" Role="BASES_LIQ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CALENDARIO">
+        <PropertyRef Name="CAL_PER" />
+        <PropertyRef Name="CAL_VIG" />
+        <PropertyRef Name="CAL_CLA" />
+      </Principal>
+      <Dependent Role="BASES_LIQ">
+        <PropertyRef Name="BALI_PERI" />
+        <PropertyRef Name="BALI_AÑO" />
+        <PropertyRef Name="BALI_CDEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FM_BASESLIQ01_BASES_LIQ_FK1">
+    <End Type="Model.BASES_LIQ" Role="BASES_LIQ" Multiplicity="1" />
+    <End Type="Model.FM_BASESLIQ01" Role="FM_BASESLIQ01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BASES_LIQ">
+        <PropertyRef Name="BALI_NRAD" />
+      </Principal>
+      <Dependent Role="FM_BASESLIQ01">
+        <PropertyRef Name="NRO_RAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MENU_MENU_FK1">
+    <End Type="Model.MENU" Role="MENU" Multiplicity="1" />
+    <End Type="Model.MENU" Role="MENU1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MENU">
+        <PropertyRef Name="MENUID" />
+      </Principal>
+      <Dependent Role="MENU1">
+        <PropertyRef Name="PADREID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TERCEROS_MUNICIPIOS_FK1">
+    <End Type="Model.MUNICIPIOS" Role="MUNICIPIOS" Multiplicity="1" />
+    <End Type="Model.TERCEROS" Role="TERCEROS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MUNICIPIOS">
+        <PropertyRef Name="MUN_COD" />
+      </Principal>
+      <Dependent Role="TERCEROS">
+        <PropertyRef Name="TER_MPIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MEMBERSHIP_USERID">
+    <End Type="Model.ORA_ASPNET_USERS" Role="ORA_ASPNET_USERS" Multiplicity="1" />
+    <End Type="Model.ORA_ASPNET_MEMBERSHIP" Role="ORA_ASPNET_MEMBERSHIP" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ORA_ASPNET_USERS">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="ORA_ASPNET_MEMBERSHIP">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SL_DETLIQ_LIQESTAMPILLAS_FK">
+    <End Type="Model.SL_LIQESTAMPILLAS" Role="SL_LIQESTAMPILLAS" Multiplicity="0..1" />
+    <End Type="Model.SL_DETLIQ" Role="SL_DETLIQ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SL_LIQESTAMPILLAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SL_DETLIQ">
+        <PropertyRef Name="ID_LIQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SL_PAGOS_LIQ_FK">
+    <End Type="Model.SL_LIQESTAMPILLAS" Role="SL_LIQESTAMPILLAS" Multiplicity="0..1" />
+    <End Type="Model.SL_PAGOS" Role="SL_PAGOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SL_LIQESTAMPILLAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SL_PAGOS">
+        <PropertyRef Name="ID_LIQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SL_TERCEROS_FK">
+    <End Type="Model.SL_TERCEROS" Role="SL_TERCEROS" Multiplicity="0..1" />
+    <End Type="Model.SL_LIQESTAMPILLAS" Role="SL_LIQESTAMPILLAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SL_TERCEROS">
+        <PropertyRef Name="TER_NIT" />
+      </Principal>
+      <Dependent Role="SL_LIQESTAMPILLAS">
+        <PropertyRef Name="TER_NIT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SL_TERCEROS_FK_PER">
+    <End Type="Model.SL_TIPOPER" Role="SL_TIPOPER" Multiplicity="1" />
+    <End Type="Model.SL_TERCEROS" Role="SL_TERCEROS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SL_TIPOPER">
+        <PropertyRef Name="COD_TIP" />
+      </Principal>
+      <Dependent Role="SL_TERCEROS">
+        <PropertyRef Name="TER_PER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SL_TERCEROS_FK_RGM">
+    <End Type="Model.SL_TIPORGM" Role="SL_TIPORGM" Multiplicity="1" />
+    <End Type="Model.SL_TERCEROS" Role="SL_TERCEROS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SL_TIPORGM">
+        <PropertyRef Name="COD_TIP" />
+      </Principal>
+      <Dependent Role="SL_TERCEROS">
+        <PropertyRef Name="TER_RGM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SL_TERCEROS_FK_TDOC">
+    <End Type="Model.TDOC_IDE" Role="TDOC_IDE" Multiplicity="1" />
+    <End Type="Model.SL_TERCEROS" Role="SL_TERCEROS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TDOC_IDE">
+        <PropertyRef Name="TDOC_COD" />
+      </Principal>
+      <Dependent Role="SL_TERCEROS">
+        <PropertyRef Name="TER_TDOC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TERCEROS_TDOC_IDE_FK1">
+    <End Type="Model.TDOC_IDE" Role="TDOC_IDE" Multiplicity="1" />
+    <End Type="Model.TERCEROS" Role="TERCEROS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TDOC_IDE">
+        <PropertyRef Name="TDOC_COD" />
+      </Principal>
+      <Dependent Role="TERCEROS">
+        <PropertyRef Name="TER_TDOC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
